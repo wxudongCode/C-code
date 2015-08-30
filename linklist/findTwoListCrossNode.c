@@ -6,6 +6,7 @@ typedef struct node{
 	struct node *next;
 }linklist;
 
+
 /*** 判断链表是否有环，如果有返回环节点***/
 linklist *findLoopNode(linklist *head)
 {
