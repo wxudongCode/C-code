@@ -6,6 +6,7 @@ typedef struct node{
 	struct node *next;
 }linklist;
 
+
 /*** 创建单链表***/ 
 linklist *createList(int num)
 {
