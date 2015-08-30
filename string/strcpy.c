@@ -1,10 +1,10 @@
 #include<stdio.h>
 #include<assert.h>
-char *strcpy(char *des, const char *src)
+char *strcpy(char *dst, const char *src)
 {
-	assert((src != NULL) && (des != NULL));	
-	char *address = des;
-	while((*des++ = *src++) != '\0');
+	assert((src != NULL) && (dst != NULL));	
+	char *address = dst;
+	while((*dst++ = *src++) != '\0');
 	return address;
 }
 

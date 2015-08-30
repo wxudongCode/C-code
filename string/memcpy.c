@@ -1,14 +1,14 @@
 #include<stdio.h>
 #include<assert.h>
 
-void *memcpy(void *des, const void *src, int count)
+void *memcpy(void *dst, const void *src, int count)
 {
-	assert((src != NULL) && (des != NULL));	
-	char *pdes = des;
+	assert((src != NULL) && (dst != NULL));	
+	char *pdst = dst;
 	const char *psrc = src;
 	while(count--)
-		*pdes++ = *psrc++;
-	return des;
+		*pdst++ = *psrc++;
+	return dst;
 }
 
 int main()
