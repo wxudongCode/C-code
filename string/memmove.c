@@ -6,14 +6,14 @@ void *memcpy(void *dst, const void *src, int count)
 	assert((src != NULL) && (dst != NULL));	
 	char *pdst = dst;
 	const char *psrc = src;
-	if((dst <= src) || (dst >= src + count)) //ÕıÏëÔËËãÌõ¼ş 
+	if((dst <= src) || (dst >= src + count)) //æ­£å‘è¿ç®—æ¡ä»¶ 
 	{
 		while(count--)
 			*pdst++ = *psrc++;
 	}
 	else
 	{
-		pdst = dst + count - 1;  //×¢ÒâºóÒÆµÄ¸öÊıÓë--µÄ¹ØÏµ  
+		pdst = dst + count - 1;  //æ³¨æ„åç§»çš„ä¸ªæ•°ä¸--çš„å…³ç³»  
 		psrc = src + count - 1;
 		while(count--)
 			*pdst-- = *psrc--;
