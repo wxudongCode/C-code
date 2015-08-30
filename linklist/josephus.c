@@ -25,7 +25,7 @@ linklist *createlist(int num)
 		printf("please input password for node %d\n", i);
 		scanf("%d", &(p->pwd));
 	}
-	p->next = head;
+	p->next = head;  //å¤´ç›¸è¿ï¼Œå½¢æˆå¾ªç¯é“¾è¡¨
 	return head; 	
 }
 
@@ -34,16 +34,16 @@ void josephus(int num, int pwd)
 	linklist *p, *q;
 	int i, j;
 	p =  createlist(num);
-	printf("³öÁĞË³Ğò£º "); 
+	printf("å‡ºåˆ—é¡ºåºï¼š "); 
 	for(i=0; i<num; i++)
 	{
-		while(--pwd)   //ÕÒµ½¸Ã½Úµã 
+		while(--pwd)   //æ‰¾åˆ°è¯¥èŠ‚ç‚¹ 
 			p = p->next;
 		pwd = p->pwd;
 		printf("%d ", p->num);
 		p->num = p->next->num;
 		p->pwd = p->next->pwd;
-		q = p->next;  //ÏÈ±£´æ£¬ÔÙ¸³Öµ£¬ºóÊÍ·Å 
+		q = p->next;  //å…ˆä¿å­˜ï¼Œå†èµ‹å€¼ï¼Œåé‡Šæ”¾ 
 		p->next = p->next->next;		
 		free(q);
 	}
