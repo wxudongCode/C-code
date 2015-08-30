@@ -45,11 +45,8 @@ linklist *insertList(linklist *head, int num)
 {
 	linklist *p, *q;
 	p = head;
-	while(num > 1)
-	{
+	while(--num)
 		p = p->next;
-		num--;
-	}
 	q = p->next;
 	p->next = (linklist *)malloc(sizeof(linklist));
 	printf("please input node data\n");
@@ -63,11 +60,8 @@ linklist *deleteList(linklist *head, int num)
 {
 	linklist *p, *q;
 	p = head;
-	while(num > 1)
-	{
+	while(--num)
 		p = p->next;
-		num--;
-	}
 	q = p->next;
 	p->next = q->next;
 	free(q); 	
