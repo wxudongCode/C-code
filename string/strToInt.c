@@ -1,3 +1,8 @@
+/*****************************************************************************     
+  Author: wxudong     
+  Date: 2015-10-04
+  Description: 字符串与整形的相互转化 
+******************************************************************************/
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -30,10 +35,18 @@ long strToInt(char *str)
 		flag = -1;
 	if(*str == '-' || *str == '+')
 		str++;
-	while(*str >= '0' && *str<= '9')
+	while(*str != '\0')
 	{
-		temp = 10 * temp + *str - '0';
-		str++;
+		if(*str >= '0' && *str<= '9')
+		{
+			temp = 10 * temp + *str - '0';
+			str++;
+		}
+		else
+		{
+			temp = 0;
+			break;
+		}
 	}
 	temp = temp * flag;
 	return temp;

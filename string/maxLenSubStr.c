@@ -15,7 +15,7 @@ int maxLenSubStr(char *str1, char *str2, char *c)
 	int max = 0;
 	int len1 = strlen(str1);
 	int len2 = strlen(str2);
-	int a[len1+1][len2+1];
+	int a[len1][len2];
 	for(i=0; i<len1; i++)
 		for(j=0; j<len2; j++)
 			a[i][j] = 0;
